@@ -1,174 +1,161 @@
-## **1. 🏷️ Project Title**
+## 🏷️ Computer Vision-Based Image Search & Object Detection using YOLOv11
+📌 Overview
 
-**Computer-Vision-Powered Image Search & Object Detection using YOLOv11**
+This project presents a real-time object detection and visual image search system powered by YOLOv11. It enables users to upload an image, detect objects within it, and retrieve visually similar images using feature-based similarity matching.
 
----
+The system is designed with a scalable architecture, supporting both CPU and GPU execution, and is deployed using an interactive Streamlit web interface.
 
-## **2. 📝 Abstract / Introduction**
+## 🎯 Key Features
 
-This project implements a **YOLOv11-based real-time object detection and visual search system**.
-Users can upload an image, and the system identifies objects using the **COCO dataset** and retrieves visually similar images using **feature extraction + similarity matching**.
+⚡ Real-time object detection using YOLOv11
 
-The project includes:
+🔍 Visual similarity search using feature embeddings
 
-* YOLOv11 inference on CPU/GPU
-* Streamlit web deployment
-* Conda-based environment setup
-* Image search pipeline
-* User-friendly UI
+🖼️ Multi-image format support (JPG, PNG, etc.)
 
----
+🌐 Interactive UI built with Streamlit
 
-## **3. 📂 Dataset & YOLO Model Details (COCO)**
+🚀 GPU acceleration support (CUDA-enabled systems)
 
-### **Dataset: COCO 2017**
+🛠️ Modular and scalable project structure
 
-* 118K training images
-* 5K validation images
-* 80 object categories
-* Common classes: person, car, dog, cup, laptop, etc.
+📊 Efficient inference with optimized performance
 
-### **YOLOv11 Model**
+## 📂 Dataset & Model Details
+## 📊 Dataset: COCO 2017
 
-* Model Used: **yolo11m.pt**
-* Pretrained on COCO dataset
-* Supports bounding box detection
-* Fast and efficient for real-time inference
+118,000 training images
 
----
+5,000 validation images
 
-## **4. 🛠️ Environment Setup**
+80 object categories
 
-Install Conda (Anaconda/Miniconda)
+Common classes: person, car, dog, laptop, bottle, etc.
 
-```bash
+## 🤖 Model: YOLOv11
+
+Model Used: yolo11m.pt
+
+Pretrained on COCO dataset
+
+Supports real-time object detection
+
+High speed and accuracy
+
+## ⚙️ System Architecture
+
+Input Image Upload
+
+YOLOv11 Object Detection
+
+Feature Extraction (Embeddings)
+
+Similarity Matching
+
+## Results Visualization (Bounding Boxes + Similar Images)
+
+🛠️ Environment Setup
+Step 1: Create Conda Environment
+```
 conda create -n yolosearch python=3.10 -y
 conda activate yolosearch
 ```
-
-Install dependencies:
-
-```bash
-pip install ultralytics
-pip install streamlit
-pip install opencv-python
-pip install numpy
-pip install pillow
+Step 2: Install Dependencies
+```
+pip install ultralytics streamlit opencv-python numpy pillow
+```
+Step 3: Install PyTorch
+🔹 GPU (Recommended)
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
-
----
-
-## **5. ⚙️ GPU Installation Steps OR CPU Installation Steps**
-
-### **GPU Setup**
-
-(If you have NVIDIA GPU)
-
-1. Install NVIDIA CUDA Toolkit (11.8 recommended)
-2. Install cuDNN
-3. Install PyTorch with GPU support:
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+🔹 CPU
 ```
-
-### **CPU Setup**
-
-If no GPU available:
-
-```bash
 pip install torch torchvision torchaudio
-pip install ultralytics
 ```
-
----
-
-## **6. 🖥️ How to Run in VS Code using Conda**
-
-### **Step 1 — Activate Environment**
-
-```bash
-conda activate yolosearch
+💻 Running the Project
+▶️ Run YOLO Inference
 ```
-
-### **Step 2 — Run YOLO Inference Script**
-
-```bash
 python src/inference.py
 ```
-
-### **Step 3 — VS Code Tips**
-
-* Select Interpreter → your conda env
-* Open integrated terminal
-* Run Streamlit or Python scripts
-
----
-
-## **7. 🌐 How to Deploy using Streamlit**
-
-Run Streamlit app:
-
-```bash
+🌐 Launch Streamlit App
+```
 streamlit run app.py
 ```
+## 🖥️ Development Setup (VS Code)
 
-Main Features:
+Select Python Interpreter → yolosearch environment
 
-* Upload image
-* Detect objects using YOLOv11
-* Show bounding boxes
-* Perform visual similarity search
-* Responsive UI
+Use integrated terminal
 
----
+Ensure required extensions (Python, Jupyter) are installed
 
-## **8. 🖼️ Output Screenshots**
+## 📸 Output Screenshots
 
-Include these images inside your GitHub repo:
+Add the following images inside your repository (/assets or /images folder)
 
-* **UI Screenshot (Streamlit home page)**
-* **Detection Output (Image + bounding boxes)**
-* **VS Code Terminal showing YOLO inference logs**
-* **Similarity search results**
-
-
-<img width="1915" height="871" alt="image" src="https://github.com/user-attachments/assets/1ac2ba07-e482-43d2-b484-9fb1f69758b0" />
-<img width="1919" height="812" alt="image" src="https://github.com/user-attachments/assets/c7574117-9e71-4fdf-8038-6436c734ec5e" />
-<img width="1773" height="826" alt="image" src="https://github.com/user-attachments/assets/03d9d3b7-d683-4ae3-a82e-075132a74023" />
-
-<img width="1911" height="905" alt="image" src="https://github.com/user-attachments/assets/46f260db-afe9-42f6-b0e8-96008cdeaf41" />
+<img width="887" height="275" alt="DLPIC1" src="https://github.com/user-attachments/assets/df014768-ac48-4f44-b0a2-ad04a9f61be7" />
+<img width="898" height="316" alt="DLPIC2" src="https://github.com/user-attachments/assets/b5e6a951-6113-4efc-8a59-2a775b7796d7" />
+<img width="867" height="412" alt="DLPIC4" src="https://github.com/user-attachments/assets/c0d1eba9-463b-4331-a0be-775633cd9642" />
+<img width="851" height="405" alt="DLPIC5" src="https://github.com/user-attachments/assets/7113c6ec-b8db-4a3d-b639-2a082b7ade4e" />
+<img width="878" height="338" alt="DLPIC3" src="https://github.com/user-attachments/assets/419d2b52-94fa-4493-8df3-73bb2eed310a" />
 
 
 
----
+Streamlit UI Interface
 
-## **9. 🚀 Enhancements / Innovations Added**
+Detection Output with Bounding Boxes
 
-Examples (Edit according to your project):
+Terminal Logs (YOLO Inference)
 
-* Added **visual similarity search** using embedding vectors
-* Implemented **GPU-accelerated YOLO inference**
-* Built a **Streamlit UI**
-* Added **search-by-object-name** feature
-* Built **logging + exception handling** system
-* Supports **multiple image formats**
+Similarity Search Results
 
----
+## 🚀 Enhancements & Innovations
 
-## **10. 📊 Results & Conclusion**
+🔍 Implemented visual similarity search using embedding vectors
 
-### **Results**
+⚡ Integrated GPU-accelerated YOLO inference
 
-* Average detection accuracy: **High**
-* Response time: **Fast (approx 20–40 ms on GPU)**
-* Works on 80 COCO classes
-* UI is easy to use and deploy
+🌐 Developed a user-friendly Streamlit interface
 
-### **Conclusion**
+🔎 Enabled search-by-object-name functionality
 
-This project successfully demonstrates a **real-time object detection + image search system** using **YOLOv11**.
-The application is optimized for both CPU and GPU and includes a deployable **Streamlit interface** suitable for real-world use.
+🧾 Added logging and exception handling
 
----
+📁 Supports multiple image input formats
+
+## 📊 Results
+
+Metric	Performance
+Detection Accuracy	High
+Inference Speed	~20–40 ms (GPU)
+Supported Classes	80 (COCO)
+Deployment	Streamlit Web App
+
+## ✅ Conclusion
+
+This project demonstrates an efficient and scalable computer vision pipeline combining real-time object detection and content-based image retrieval.
+
+With support for both CPU and GPU environments, along with a deployable web interface, the system is suitable for practical applications such as:
+
+Smart surveillance
+
+E-commerce image search
+
+Content-based media retrieval
+
+AI-powered recommendation systems
+
+📌 Future Scope
+
+🔥 Integration with cloud deployment (AWS / Azure)
+
+📱 Mobile-friendly UI
+
+🧠 Advanced deep learning embeddings (CLIP, ResNet)
+
+📦 API-based service deployment
+
+## 👩‍💻 Author
+
+## NITHYASREE S
